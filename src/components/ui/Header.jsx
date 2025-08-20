@@ -47,6 +47,9 @@ export default function Header() {
           </div>
 
           <nav className="flex items-center gap-4 pr-4 text-gray-700">
+            <Link to="/" className="hidden md:block hover:underline">
+              홈
+            </Link>
             <Link to="/login" className="hidden md:block hover:underline">
               로그인
             </Link>

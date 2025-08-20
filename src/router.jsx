@@ -6,6 +6,7 @@ import { ROUTES } from "./lib/routes";
 import NotFound from "./routes/NotFound";
 import { lazy } from "react";
 import MyPage from "./routes/member/MyPage";
+import SignUpForm from "./routes/auth/SignUpForm";
 
 const profiles = lazy(() => import("@/routes/member/Profile"))
 
@@ -18,6 +19,7 @@ export default function AppRoutes() {
           <Route path={ROUTES.MEMBER.PROFILE} element={<Profile/>} />
         </Route>
           <Route path={ROUTES.MYPAGE} element={<MyPage/>}/>
+          <Route path={ROUTES.SIGNUP} element={<SignUpForm/>}/>
       </Route>
     
       

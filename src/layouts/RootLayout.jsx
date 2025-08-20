@@ -2,9 +2,13 @@ import Layout from "@/components/ui/Layout";
 import { Suspense } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { Outlet } from "react-router-dom";
+import { ThemeContext } from "@/context/ThemeContext";
 
 export default function RootLayout() {
+    const theme = 'dark';
+
     return(
+        <ThemeContext value={theme}>
         <Layout>
             <ErrorBoundary fallback={<p>오류가 발생했습니다</p>}>
                 <Suspense fallback={<div className="p-6">로딩중...</div>}>
@@ -12,5 +16,6 @@ export default function RootLayout() {
                 </Suspense>
             </ErrorBoundary>
         </Layout>
+        </ThemeContext>
     )
 }

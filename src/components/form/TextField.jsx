@@ -1,4 +1,4 @@
-export default function TextField({label, name, value, onChange, required}) {
+export default function TextField({label, name, value, onChange, required, children, type}) {
     return(
         <div className="space-y-1">
             <label htmlFor={name} className="text-sm font-medium">
@@ -9,7 +9,9 @@ export default function TextField({label, name, value, onChange, required}) {
             name={name}
             value={value}
             onChange={onChange}
-            className="w-full rounded-md border px-3 py-3" />
+            type={type}
+            className="w-full rounded-md border border-gray-300 px-3 py-3" />
+            {children}
         </div>
     )
 }
